@@ -6,28 +6,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText valueOne;
-    private EditText valueTwo;
-    private TextView result;
+    private EditText txtUser;
+    private EditText txtPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        valueOne = (EditText)findViewById(R.id.txt_Num1);
-        valueTwo = (EditText)findViewById(R.id.txt_Num2);
-        result = (TextView)findViewById(R.id.txt_Result);
+        txtUser = (EditText)findViewById(R.id.txt_User);
+        txtPassword = (EditText)findViewById(R.id.txt_Password);
     }
 
-    public void sum(View view) {
-        String sumOne = valueOne.getText().toString();
-        String sumTwo = valueTwo.getText().toString();
+    public void register(View view) {
+       /*
+       String sumOne = txtUser.getText().toString();
+        String sumTwo = txtPassword.getText().toString();
 
         int numOne = Integer.parseInt(sumOne);
         int numTwo = Integer.parseInt(sumTwo);
@@ -37,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         String resultado = String.valueOf(suma);
 
         result.setText(resultado);
+        */
 
         Intent routerRegister = new Intent(this, RegistroActivity.class);
         startActivity(routerRegister);
